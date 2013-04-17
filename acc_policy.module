@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Access Policy feature.
+ */
+
+include_once 'acc_policy.features.inc';
