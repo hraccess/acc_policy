@@ -13,9 +13,9 @@ function acc_policy_taxonomy_default_vocabularies() {
       'name' => 'Policy Type',
       'machine_name' => 'policy_type',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

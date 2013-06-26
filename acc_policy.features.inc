@@ -18,7 +18,7 @@ function acc_policy_ctools_plugin_api() {
  * Implements hook_views_api().
  */
 function acc_policy_views_api() {
-  return array("version" => "3.0");
+  return array("api" => "3.0");
 }
 
 /**
