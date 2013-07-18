@@ -50,7 +50,7 @@ function acc_policy_field_default_fields() {
           'view' => array(
             'args' => array(),
             'display_name' => 'entityreference_4',
-            'view_name' => 'impact',
+            'view_name' => 'acc_impacts',
           ),
         ),
         'target_type' => 'taxonomy_term',
