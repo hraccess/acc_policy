@@ -11,7 +11,7 @@ function acc_policy_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'policy';
+  $view->name = 'acc_policy';
   $view->description = '';
   $view->tag = 'Access';
   $view->base_table = 'node';

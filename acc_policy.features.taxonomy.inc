@@ -9,9 +9,9 @@
  */
 function acc_policy_taxonomy_default_vocabularies() {
   return array(
-    'policy_type' => array(
+    'acc_policy_type' => array(
       'name' => 'Policy Type',
-      'machine_name' => 'policy_type',
+      'machine_name' => 'acc_policy_type',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',
