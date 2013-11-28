@@ -10,43 +10,75 @@
 function acc_policy_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_best_practice'
-  $field_bases['field_best_practice'] = array(
+  // Exported field_base: 'field_acc_action_taken'
+  $field_bases['field_acc_action_taken'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_best_practice',
+    'field_name' => 'field_acc_action_taken',
     'field_permissions' => array(
       'type' => 0,
     ),
     'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'field_collection',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_blank_items' => 1,
+      'path' => '',
+      'profile2_private' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'field_collection',
+  );
+
+  // Exported field_base: 'field_attach_file'
+  $field_bases['field_attach_file'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_attach_file',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(
+      'fid' => array(
+        'columns' => array(
+          'fid' => 'fid',
+        ),
+        'table' => 'file_managed',
+      ),
+    ),
     'indexes' => array(
-      'value' => array(
-        0 => 'value',
+      'fid' => array(
+        0 => 'fid',
       ),
     ),
     'locked' => 0,
-    'module' => 'list',
+    'module' => 'file',
     'settings' => array(
-      'allowed_values' => array(
-        'Yes' => 'Yes',
-        'No' => 'No',
+      'display_default' => 0,
+      'display_field' => 1,
+      'entity_translation_sync' => array(
+        0 => 'fid',
       ),
-      'allowed_values_function' => '',
-      'entity_translation_sync' => FALSE,
+      'profile2_private' => FALSE,
+      'uri_scheme' => 'public',
     ),
     'translatable' => 0,
-    'type' => 'list_text',
+    'type' => 'file',
   );
 
-  // Exported field_base: 'field_date_of_issuance'
-  $field_bases['field_date_of_issuance'] = array(
+  // Exported field_base: 'field_effective_dates'
+  $field_bases['field_effective_dates'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_date_of_issuance',
+    'field_name' => 'field_effective_dates',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -66,22 +98,22 @@ function acc_policy_field_default_field_bases() {
         'second' => 0,
         'year' => 'year',
       ),
-      'repeat' => 0,
+      'profile2_private' => FALSE,
       'timezone_db' => '',
-      'todate' => '',
+      'todate' => 'optional',
       'tz_handling' => 'none',
     ),
     'translatable' => 0,
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_effect_on_previous_policy'
-  $field_bases['field_effect_on_previous_policy'] = array(
+  // Exported field_base: 'field_effects_on_previous_policy'
+  $field_bases['field_effects_on_previous_policy'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_effect_on_previous_policy',
+    'field_name' => 'field_effects_on_previous_policy',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -105,35 +137,33 @@ function acc_policy_field_default_field_bases() {
       'handler' => 'base',
       'handler_settings' => array(
         'behaviors' => array(
-          'test_field_behavior' => array(
-            'status' => 0,
-          ),
           'views-select-list' => array(
             'status' => 0,
           ),
         ),
         'sort' => array(
           'direction' => 'DESC',
-          'field' => 'field_date_of_issuance:value',
-          'type' => 'field',
+          'property' => 'created',
+          'type' => 'property',
         ),
         'target_bundles' => array(
-          'policy' => 'policy',
+          'acc_policy' => 'acc_policy',
         ),
       ),
+      'profile2_private' => FALSE,
       'target_type' => 'node',
     ),
     'translatable' => 0,
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_policy_impact'
-  $field_bases['field_policy_impact'] = array(
+  // Exported field_base: 'field_impact_policy'
+  $field_bases['field_impact_policy'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_policy_impact',
+    'field_name' => 'field_impact_policy',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -143,20 +173,21 @@ function acc_policy_field_default_field_bases() {
     'module' => 'field_collection',
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'hide_blank_items' => TRUE,
+      'hide_blank_items' => 1,
       'path' => '',
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_source_of_information'
-  $field_bases['field_source_of_information'] = array(
+  // Exported field_base: 'field_source_of_info'
+  $field_bases['field_source_of_info'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_source_of_information',
+    'field_name' => 'field_source_of_info',
     'field_permissions' => array(
       'type' => 0,
     ),
@@ -178,47 +209,10 @@ function acc_policy_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'max_length' => 255,
+      'profile2_private' => FALSE,
     ),
     'translatable' => 0,
     'type' => 'text',
-  );
-
-  // Exported field_base: 'field_type_of_policy'
-  $field_bases['field_type_of_policy'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_type_of_policy',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
-    'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'taxonomy',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'acc_policy_type',
-          'parent' => 0,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
   );
 
   return $field_bases;
