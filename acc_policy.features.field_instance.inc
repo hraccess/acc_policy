@@ -10,6 +10,83 @@
 function acc_policy_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'field_collection_item-field_impact_policy-field_impact_policy_text'
+  $field_instances['field_collection_item-field_impact_policy-field_impact_policy_text'] = array(
+    'bundle' => 'field_impact_policy',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_impact_policy_text',
+    'label' => 'Impact',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'field_collection_item-field_impact_policy-field_value'
+  $field_instances['field_collection_item-field_impact_policy-field_value'] = array(
+    'bundle' => 'field_impact_policy',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'field_collection_item',
+    'field_name' => 'field_value',
+    'label' => 'Value',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-acc_policy-body'
   $field_instances['node-acc_policy-body'] = array(
     'bundle' => 'acc_policy',
@@ -683,12 +760,14 @@ function acc_policy_field_default_field_instances() {
   t('Date of issunce');
   t('Effective dates');
   t('Effects on previous policy ');
+  t('Impact');
   t('Impact Policy');
   t('Issuing actor / agency');
   t('Sector / Clusters');
   t('Source of info');
   t('Type of affected organization');
   t('Type of policy');
+  t('Value');
 
   return $field_instances;
 }
