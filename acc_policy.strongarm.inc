@@ -62,6 +62,24 @@ function acc_policy_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'content_access_acc_policy';
+  $strongarm->value = array(
+    'view_own' => array(
+      0 => 147444660,
+      1 => 52310416,
+      2 => 30037204,
+    ),
+    'view' => array(
+      0 => 147444660,
+      1 => 52310416,
+      2 => 30037204,
+    ),
+  );
+  $export['content_access_acc_policy'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__acc_policy';
   $strongarm->value = array(
     'view_modes' => array(),
@@ -71,7 +89,7 @@ function acc_policy_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '15',
+          'weight' => '14',
         ),
       ),
       'display' => array(),

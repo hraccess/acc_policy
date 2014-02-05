@@ -13,20 +13,17 @@ function acc_policy_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'acc_csv_policy_type';
+  $feeds_importer->id = 'acc_type_of_policy';
   $feeds_importer->config = array(
-    'name' => 'CSV Type of Policy',
-    'description' => 'To import terms for type of policy taxonomy',
+    'name' => 'Access Type of policy',
+    'description' => '',
     'fetcher' => array(
-      'plugin_key' => 'FeedsFileFetcher',
+      'plugin_key' => 'FeedsHTTPFetcher',
       'config' => array(
-        'allowed_extensions' => 'txt csv tsv xml opml',
-        'direct' => FALSE,
-        'directory' => 'private://feeds',
-        'allowed_schemes' => array(
-          0 => 'public',
-          1 => 'private',
-        ),
+        'auto_detect_feeds' => FALSE,
+        'use_pubsubhubbub' => FALSE,
+        'designated_hub' => '',
+        'request_timeout' => NULL,
       ),
     ),
     'parser' => array(
@@ -42,25 +39,40 @@ function acc_policy_feeds_importer_default() {
         'vocabulary' => 0,
         'mappings' => array(
           0 => array(
-            'source' => 'Name',
+            'source' => 'Name:en',
             'target' => 'name',
+            'unique' => FALSE,
+          ),
+          1 => array(
+            'source' => 'Parent',
+            'target' => 'parent',
+            'unique' => FALSE,
+          ),
+          2 => array(
+            'source' => 'UUID',
+            'target' => 'uuid:uuid',
+            'unique' => FALSE,
+          ),
+          3 => array(
+            'source' => 'GUID',
+            'target' => 'guid',
             'unique' => FALSE,
           ),
         ),
         'update_existing' => '2',
         'input_format' => 'plain_text',
         'skip_hash_check' => 0,
-        'bundle' => 'acc_type_of_polict',
+        'bundle' => 'acc_type_of_policy',
       ),
     ),
     'content_type' => '',
     'update' => 0,
-    'import_period' => '-1',
+    'import_period' => '86400',
     'expire_period' => 3600,
     'import_on_create' => 1,
     'process_in_background' => 0,
   );
-  $export['acc_csv_policy_type'] = $feeds_importer;
+  $export['acc_type_of_policy'] = $feeds_importer;
 
   return $export;
 }

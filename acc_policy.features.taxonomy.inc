@@ -9,9 +9,9 @@
  */
 function acc_policy_taxonomy_default_vocabularies() {
   return array(
-    'acc_type_of_polict' => array(
-      'name' => 'Type of Policy',
-      'machine_name' => 'acc_type_of_polict',
+    'acc_type_of_policy' => array(
+      'name' => 'Access Type of policy',
+      'machine_name' => 'acc_type_of_policy',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

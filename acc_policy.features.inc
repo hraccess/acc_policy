@@ -29,7 +29,7 @@ function acc_policy_views_api($module = NULL, $api = NULL) {
 function acc_policy_node_info() {
   $items = array(
     'acc_policy' => array(
-      'name' => t('Policy'),
+      'name' => t('Access Policy'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

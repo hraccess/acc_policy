@@ -10,83 +10,6 @@
 function acc_policy_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_impact_policy-field_impact_policy_text'
-  $field_instances['field_collection_item-field_impact_policy-field_impact_policy_text'] = array(
-    'bundle' => 'field_impact_policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_impact_policy_text',
-    'label' => 'Impact',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
-      'type' => 'options_select',
-      'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'field_collection_item-field_impact_policy-field_value'
-  $field_instances['field_collection_item-field_impact_policy-field_value'] = array(
-    'bundle' => 'field_impact_policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_value',
-    'label' => 'Value',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-acc_policy-body'
   $field_instances['node-acc_policy-body'] = array(
     'bundle' => 'acc_policy',
@@ -132,8 +55,62 @@ function acc_policy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-acc_policy-field_acc_action_taken'
-  $field_instances['node-acc_policy-field_acc_action_taken'] = array(
+  // Exported field_instance: 'node-acc_policy-field_acc_date_policy'
+  $field_instances['node-acc_policy-field_acc_date_policy'] = array(
+    'bundle' => 'acc_policy',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_acc_date_policy',
+    'label' => 'Date of issuance',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-acc_policy-field_acc_impacts'
+  $field_instances['node-acc_policy-field_acc_impacts'] = array(
     'bundle' => 'acc_policy',
     'default_value' => NULL,
     'deleted' => 0,
@@ -150,7 +127,7 @@ function acc_policy_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 10,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -160,8 +137,8 @@ function acc_policy_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_acc_action_taken',
-    'label' => 'Action Taken Policy',
+    'field_name' => 'field_acc_impacts',
+    'label' => 'Impacts Policy',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -172,12 +149,12 @@ function acc_policy_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
-  // Exported field_instance: 'node-acc_policy-field_access_constraint'
-  $field_instances['node-acc_policy-field_access_constraint'] = array(
+  // Exported field_instance: 'node-acc_policy-field_access_constraints'
+  $field_instances['node-acc_policy-field_access_constraints'] = array(
     'bundle' => 'acc_policy',
     'default_value' => NULL,
     'deleted' => 0,
@@ -185,10 +162,12 @@ function acc_policy_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 12,
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -198,10 +177,15 @@ function acc_policy_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_access_constraint',
-    'label' => 'Access Constraint',
+    'field_name' => 'field_access_constraints',
+    'label' => 'Access Constraints',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
@@ -216,8 +200,8 @@ function acc_policy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-acc_policy-field_attach_file'
-  $field_instances['node-acc_policy-field_attach_file'] = array(
+  // Exported field_instance: 'node-acc_policy-field_attachments'
+  $field_instances['node-acc_policy-field_attachments'] = array(
     'bundle' => 'acc_policy',
     'deleted' => 0,
     'description' => '',
@@ -227,7 +211,7 @@ function acc_policy_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -237,14 +221,14 @@ function acc_policy_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_attach_file',
-    'label' => 'Attach File',
+    'field_name' => 'field_attachments',
+    'label' => 'Attach a file',
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
       'entity_translation_sync' => FALSE,
       'file_directory' => '',
-      'file_extensions' => 'txt',
+      'file_extensions' => 'txt pdf doc docx xls',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -275,7 +259,7 @@ function acc_policy_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
@@ -291,7 +275,7 @@ function acc_policy_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 7,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -322,7 +306,7 @@ function acc_policy_field_default_field_instances() {
   // Exported field_instance: 'node-acc_policy-field_clusters'
   $field_instances['node-acc_policy-field_clusters'] = array(
     'bundle' => 'acc_policy',
-    'default_value' => array(),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -331,7 +315,7 @@ function acc_policy_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -342,78 +326,65 @@ function acc_policy_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_clusters',
-    'label' => 'Sector / Clusters',
-    'required' => FALSE,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
-      'type' => 'options_buttons',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-acc_policy-field_date'
-  $field_instances['node-acc_policy-field_date'] = array(
-    'bundle' => 'acc_policy',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_date',
-    'label' => 'Date of issunce',
+    'label' => 'Sectors / Clusters',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 2,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
     ),
   );
 
-  // Exported field_instance: 'node-acc_policy-field_effective_dates'
-  $field_instances['node-acc_policy-field_effective_dates'] = array(
+  // Exported field_instance: 'node-acc_policy-field_eff_prev_policy'
+  $field_instances['node-acc_policy-field_eff_prev_policy'] = array(
+    'bundle' => 'acc_policy',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_eff_prev_policy',
+    'label' => 'Effects on previous policy',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-acc_policy-field_incident_date'
+  $field_instances['node-acc_policy-field_incident_date'] = array(
     'bundle' => 'acc_policy',
     'deleted' => 0,
     'description' => '',
@@ -429,7 +400,7 @@ function acc_policy_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -439,7 +410,7 @@ function acc_policy_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_effective_dates',
+    'field_name' => 'field_incident_date',
     'label' => 'Effective dates',
     'required' => 0,
     'settings' => array(
@@ -466,92 +437,6 @@ function acc_policy_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-acc_policy-field_effects_on_previous_policy'
-  $field_instances['node-acc_policy-field_effects_on_previous_policy'] = array(
-    'bundle' => 'acc_policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_effects_on_previous_policy',
-    'label' => 'Effects on previous policy ',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
-      'type' => 'options_select',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-acc_policy-field_impact_policy'
-  $field_instances['node-acc_policy-field_impact_policy'] = array(
-    'bundle' => 'acc_policy',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_impact_policy',
-    'label' => 'Impact Policy',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(),
-      'type' => 'field_collection_embed',
-      'weight' => 12,
-    ),
-  );
-
   // Exported field_instance: 'node-acc_policy-field_organization_type'
   $field_instances['node-acc_policy-field_organization_type'] = array(
     'bundle' => 'acc_policy',
@@ -564,7 +449,7 @@ function acc_policy_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -585,15 +470,15 @@ function acc_policy_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => 0,
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-acc_policy-field_responsible_actor'
-  $field_instances['node-acc_policy-field_responsible_actor'] = array(
+  // Exported field_instance: 'node-acc_policy-field_responsible_actors'
+  $field_instances['node-acc_policy-field_responsible_actors'] = array(
     'bundle' => 'acc_policy',
     'default_value' => NULL,
     'deleted' => 0,
@@ -616,7 +501,7 @@ function acc_policy_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_responsible_actor',
+    'field_name' => 'field_responsible_actors',
     'label' => 'Issuing actor / agency',
     'required' => 0,
     'settings' => array(
@@ -632,7 +517,7 @@ function acc_policy_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'apply_chosen' => 0,
+        'apply_chosen' => 1,
       ),
       'type' => 'options_select',
       'weight' => 3,
@@ -651,7 +536,7 @@ function acc_policy_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -662,7 +547,7 @@ function acc_policy_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_source_of_info',
-    'label' => 'Source of info',
+    'label' => 'Source of information',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -722,7 +607,7 @@ function acc_policy_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -752,22 +637,19 @@ function acc_policy_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Access Constraint');
-  t('Action Taken Policy');
-  t('Attach File');
+  t('Access Constraints');
+  t('Attach a file');
   t('Best Practice');
   t('Body');
-  t('Date of issunce');
+  t('Date of issuance');
   t('Effective dates');
-  t('Effects on previous policy ');
-  t('Impact');
-  t('Impact Policy');
+  t('Effects on previous policy');
+  t('Impacts Policy');
   t('Issuing actor / agency');
-  t('Sector / Clusters');
-  t('Source of info');
+  t('Sectors / Clusters');
+  t('Source of information');
   t('Type of affected organization');
   t('Type of policy');
-  t('Value');
 
   return $field_instances;
 }
