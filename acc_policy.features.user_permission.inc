@@ -10,64 +10,111 @@
 function acc_policy_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'administer acc_type_of_polict vocabulary terms'.
-  $permissions['administer acc_type_of_polict vocabulary terms'] = array(
-    'name' => 'administer acc_type_of_polict vocabulary terms',
+  // Exported permission: 'clear acc_type_of_policy feeds'.
+  $permissions['clear acc_type_of_policy feeds'] = array(
+    'name' => 'clear acc_type_of_policy feeds',
     'roles' => array(
-      'manager' => 'manager',
-    ),
-    'module' => 'vppr',
-  );
-
-  // Exported permission: 'clear acc_csv_policy_type feeds'.
-  $permissions['clear acc_csv_policy_type feeds'] = array(
-    'name' => 'clear acc_csv_policy_type feeds',
-    'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
       'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
 
-  // Exported permission: 'delete terms in acc_type_of_polict'.
-  $permissions['delete terms in acc_type_of_polict'] = array(
-    'name' => 'delete terms in acc_type_of_polict',
+  // Exported permission: 'create acc_policy content'.
+  $permissions['create acc_policy content'] = array(
+    'name' => 'create acc_policy content',
     'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
       'manager' => 'manager',
     ),
-    'module' => 'taxonomy',
+    'module' => 'node',
   );
 
-  // Exported permission: 'edit terms in acc_type_of_polict'.
-  $permissions['edit terms in acc_type_of_polict'] = array(
-    'name' => 'edit terms in acc_type_of_polict',
+  // Exported permission: 'delete any acc_policy content'.
+  $permissions['delete any acc_policy content'] = array(
+    'name' => 'delete any acc_policy content',
     'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
       'manager' => 'manager',
     ),
-    'module' => 'taxonomy',
+    'module' => 'node',
   );
 
-  // Exported permission: 'import acc_csv_policy_type feeds'.
-  $permissions['import acc_csv_policy_type feeds'] = array(
-    'name' => 'import acc_csv_policy_type feeds',
+  // Exported permission: 'delete own acc_policy content'.
+  $permissions['delete own acc_policy content'] = array(
+    'name' => 'delete own acc_policy content',
     'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any acc_policy content'.
+  $permissions['edit any acc_policy content'] = array(
+    'name' => 'edit any acc_policy content',
+    'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own acc_policy content'.
+  $permissions['edit own acc_policy content'] = array(
+    'name' => 'edit own acc_policy content',
+    'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'import acc_type_of_policy feeds'.
+  $permissions['import acc_type_of_policy feeds'] = array(
+    'name' => 'import acc_type_of_policy feeds',
+    'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
       'manager' => 'manager',
     ),
     'module' => 'feeds',
   );
 
-  // Exported permission: 'tamper acc_csv_policy_type'.
-  $permissions['tamper acc_csv_policy_type'] = array(
-    'name' => 'tamper acc_csv_policy_type',
+  // Exported permission: 'tamper acc_type_of_policy'.
+  $permissions['tamper acc_type_of_policy'] = array(
+    'name' => 'tamper acc_type_of_policy',
     'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
       'manager' => 'manager',
     ),
     'module' => 'feeds_tamper',
   );
 
-  // Exported permission: 'unlock acc_csv_policy_type feeds'.
-  $permissions['unlock acc_csv_policy_type feeds'] = array(
-    'name' => 'unlock acc_csv_policy_type feeds',
+  // Exported permission: 'tamper csv_access_policy'.
+  $permissions['tamper csv_access_policy'] = array(
+    'name' => 'tamper csv_access_policy',
     'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
+      'manager' => 'manager',
+    ),
+    'module' => 'feeds_tamper',
+  );
+
+  // Exported permission: 'unlock acc_type_of_policy feeds'.
+  $permissions['unlock acc_type_of_policy feeds'] = array(
+    'name' => 'unlock acc_type_of_policy feeds',
+    'roles' => array(
+      'access manager' => 'access manager',
+      'administrator' => 'administrator',
       'manager' => 'manager',
     ),
     'module' => 'feeds',
