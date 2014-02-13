@@ -79,7 +79,6 @@ function acc_policy_default_search_api_index() {
         "field_eff_prev_policy" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "node" },
         "field_source_of_info" : { "type" : "text" },
         "field_type_of_policy" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_link_description" : { "type" : "text" },
         "search_api_language" : { "type" : "string" },
         "search_api_access_node" : { "type" : "list\\u003Cstring\\u003E" },
         "field_acc_impacts:field_acc_impact_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },

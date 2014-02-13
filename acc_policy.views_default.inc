@@ -282,9 +282,9 @@ function acc_policy_views_default_views() {
   $handler->display->display_options['path'] = 'access/policies/xls';
   $handler->display->display_options['displays'] = array(
     'default' => 'default',
-    'page' => 'page',
-    'page_1' => 'page_1',
-    'page_2' => 'page_2',
+    'master' => 'master',
+    'table' => 'table',
+    'list' => 'list',
   );
   $translatables['acc_policies'] = array(
     t('Master'),

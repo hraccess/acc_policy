@@ -24,14 +24,15 @@ function acc_policy_facetapi_default_facet_settings() {
     'dependencies' => array(
       'bundle' => 'none',
       'bundle_selected' => array(),
+      'roles' => array(),
     ),
     'facet_mincount' => '1',
     'facet_missing' => '0',
     'flatten' => 0,
     'query_type' => 'date',
-    'default_true' => TRUE,
+    'default_true' => '1',
     'facet_search_ids' => array(),
-    'date_granularity' => 'MINUTE',
+    'date_granularity' => 'MONTH',
     'pretty_paths_alias' => 'created',
   );
   $export['search_api@acc_policy::created'] = $facet;
