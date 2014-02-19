@@ -54,6 +54,15 @@ function acc_policy_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in acc_type_of_policy'.
+  $permissions['delete terms in acc_type_of_policy'] = array(
+    'name' => 'delete terms in acc_type_of_policy',
+    'roles' => array(
+      'access manager' => 'access manager',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any acc_policy content'.
   $permissions['edit any acc_policy content'] = array(
     'name' => 'edit any acc_policy content',
@@ -74,6 +83,15 @@ function acc_policy_user_default_permissions() {
       'manager' => 'manager',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in acc_type_of_policy'.
+  $permissions['edit terms in acc_type_of_policy'] = array(
+    'name' => 'edit terms in acc_type_of_policy',
+    'roles' => array(
+      'access manager' => 'access manager',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'import acc_type_of_policy feeds'.

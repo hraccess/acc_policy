@@ -172,7 +172,8 @@ function acc_policy_views_default_views() {
 
   /* Display: XLS */
   $handler = $view->new_display('views_data_export', 'XLS', 'views_data_export_1');
-  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
   $handler->display->display_options['style_options']['provide_file'] = 1;
   $handler->display->display_options['style_options']['filename'] = 'policies.xls';
@@ -200,7 +201,7 @@ function acc_policy_views_default_views() {
   $handler->display->display_options['fields']['field_acc_date_policy']['table'] = 'search_api_index_acc_policy';
   $handler->display->display_options['fields']['field_acc_date_policy']['field'] = 'field_acc_date_policy';
   $handler->display->display_options['fields']['field_acc_date_policy']['settings'] = array(
-    'format_type' => 'short',
+    'format_type' => 'access_short_date',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -211,7 +212,7 @@ function acc_policy_views_default_views() {
   $handler->display->display_options['fields']['field_incident_date']['table'] = 'search_api_index_acc_policy';
   $handler->display->display_options['fields']['field_incident_date']['field'] = 'field_incident_date';
   $handler->display->display_options['fields']['field_incident_date']['settings'] = array(
-    'format_type' => 'short',
+    'format_type' => 'access_short_date',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
