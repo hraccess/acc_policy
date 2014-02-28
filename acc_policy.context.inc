@@ -99,18 +99,7 @@ function acc_policy_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views--exp-acc_policies-list' => array(
-          'module' => 'views',
-          'delta' => '-exp-acc_policies-list',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables
@@ -132,18 +121,7 @@ function acc_policy_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'views--exp-acc_policies-table' => array(
-          'module' => 'views',
-          'delta' => '-exp-acc_policies-table',
-          'region' => 'sidebar_first',
-          'weight' => '-10',
-        ),
-      ),
-    ),
-  );
+  $context->reactions = array();
   $context->condition_mode = 0;
 
   // Translatables

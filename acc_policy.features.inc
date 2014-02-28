@@ -71,7 +71,7 @@ function acc_policy_default_search_api_index() {
         "author" : { "type" : "integer", "entity_type" : "user" },
         "field_clusters" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_responsible_actors" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_organization_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_organization_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "field_incident_date" : { "type" : "date" },
         "field_acc_date_policy" : { "type" : "date" },
         "field_access_constraints" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
@@ -88,7 +88,7 @@ function acc_policy_default_search_api_index() {
         "search_api_alter_bundle_filter" : {
           "status" : 1,
           "weight" : "-10",
-          "settings" : { "default" : "1", "bundles" : { "acc_policy" : "acc_policy" } }
+          "settings" : { "default" : "0", "bundles" : { "acc_policy" : "acc_policy" } }
         },
         "search_api_alter_node_access" : { "status" : 1, "weight" : "0", "settings" : [] },
         "search_api_alter_node_status" : { "status" : 0, "weight" : "0", "settings" : [] },
