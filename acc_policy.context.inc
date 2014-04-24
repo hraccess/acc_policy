@@ -32,49 +32,49 @@ function acc_policy_context_default_contexts() {
           'module' => 'facetapi',
           'delta' => 'INaJU6uAncUh8yWv6oYWEmoiPOmpt0fZ',
           'region' => 'sidebar_first',
-          'weight' => '-10',
+          'weight' => '1',
         ),
         'facetapi-9VmM0bcMLZTVUkP3bNyZV7UcUGaHx7dy' => array(
           'module' => 'facetapi',
           'delta' => '9VmM0bcMLZTVUkP3bNyZV7UcUGaHx7dy',
           'region' => 'sidebar_first',
-          'weight' => '-9',
+          'weight' => '2',
         ),
         'facetapi-ljdWdDK0IexlCjtbQv7v80ID171ZyvtP' => array(
           'module' => 'facetapi',
           'delta' => 'ljdWdDK0IexlCjtbQv7v80ID171ZyvtP',
           'region' => 'sidebar_first',
-          'weight' => '-8',
+          'weight' => '3',
         ),
         'facetapi-SPTN7AGe5Y3Aq8I6kGYP42OtkynIgJVZ' => array(
           'module' => 'facetapi',
           'delta' => 'SPTN7AGe5Y3Aq8I6kGYP42OtkynIgJVZ',
           'region' => 'sidebar_first',
-          'weight' => '-7',
+          'weight' => '4',
         ),
         'facetapi-8zaTB1mcVgqvaHRK0HyO1BcIqT0lgkve' => array(
           'module' => 'facetapi',
           'delta' => '8zaTB1mcVgqvaHRK0HyO1BcIqT0lgkve',
           'region' => 'sidebar_first',
-          'weight' => '-6',
+          'weight' => '5',
         ),
         'facetapi-eSrGaer4qs0VIC0GpXanipJPCvg18lhK' => array(
           'module' => 'facetapi',
           'delta' => 'eSrGaer4qs0VIC0GpXanipJPCvg18lhK',
           'region' => 'sidebar_first',
-          'weight' => '-5',
+          'weight' => '6',
         ),
         'facetapi-jh5k4na5vwQpnJPDnwrrDwhl62nZGasK' => array(
           'module' => 'facetapi',
           'delta' => 'jh5k4na5vwQpnJPDnwrrDwhl62nZGasK',
           'region' => 'sidebar_first',
-          'weight' => '-4',
+          'weight' => '7',
         ),
         'facetapi-puxqAstz92kfhvpdFN8N4IUr4m2AdRIG' => array(
           'module' => 'facetapi',
           'delta' => 'puxqAstz92kfhvpdFN8N4IUr4m2AdRIG',
           'region' => 'sidebar_first',
-          'weight' => '-3',
+          'weight' => '8',
         ),
       ),
     ),
@@ -99,7 +99,18 @@ function acc_policy_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views--exp-acc_policies-list' => array(
+          'module' => 'views',
+          'delta' => '-exp-acc_policies-list',
+          'region' => 'sidebar_first',
+          'weight' => '0',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables
@@ -121,7 +132,18 @@ function acc_policy_context_default_contexts() {
       ),
     ),
   );
-  $context->reactions = array();
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views--exp-acc_policies-table' => array(
+          'module' => 'views',
+          'delta' => '-exp-acc_policies-table',
+          'region' => 'sidebar_first',
+          'weight' => '0',
+        ),
+      ),
+    ),
+  );
   $context->condition_mode = 0;
 
   // Translatables

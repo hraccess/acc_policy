@@ -71,7 +71,7 @@ function acc_policy_default_search_api_index() {
         "author" : { "type" : "integer", "entity_type" : "user" },
         "field_clusters" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_responsible_actors" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_organization_type" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_organization_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_incident_date" : { "type" : "date" },
         "field_acc_date_policy" : { "type" : "date" },
         "field_access_constraints" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
